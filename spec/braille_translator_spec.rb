@@ -8,9 +8,9 @@ RSpec.describe 'BrailleTranslator' do
       expect(translator).to be_a(BrailleTranslator)
     end
 
-    xit 'has a library of english to braille' do
-      expect(translator.eng_to_braille).to eq({})
-    end
+    # xit 'has a library of english to braille' do
+    #   expect(translator.eng_to_braille).to eq({})
+    # end
   end
 
   describe 'braille keys' do
@@ -36,6 +36,12 @@ RSpec.describe 'BrailleTranslator' do
       it 'returns a string of braille' do
         expect(translator.key4).to eq('..')
       end
+    end
+  end
+
+  describe '#eng_to_braille_library' do
+    it 'can return an array of braille that corresponds to a letter' do
+      expect(translator.eng_to_braille['a']).to eq(['0.', '..', '..'])
     end
   end
 end
