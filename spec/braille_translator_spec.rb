@@ -1,4 +1,4 @@
-require './lib/braille_translator'
+require './spec/spec_helper'
 
 RSpec.describe 'BrailleTranslator' do
   let(:translator) { BrailleTranslator.new}
@@ -41,7 +41,7 @@ RSpec.describe 'BrailleTranslator' do
     end
   end
 
-  describe '#convert_to_braille' do
+  describe '#to_braille' do
     it 'can take a string of english and convert to braille' do
       message = 'hello'
       expect(translator.to_braille(message)).to eq("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")

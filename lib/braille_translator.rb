@@ -56,7 +56,6 @@ class BrailleTranslator
     braille_text = text.chars.map do |char|
       eng_to_braille[char]
     end
-
     joined_text = braille_text.transpose.map do |braille|
       braille.join
     end

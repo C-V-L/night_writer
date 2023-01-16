@@ -1,4 +1,4 @@
 require 'simplecov'
 SimpleCov.start
 
-require_relative 'braille_translator'
+require './lib/braille_translator'
