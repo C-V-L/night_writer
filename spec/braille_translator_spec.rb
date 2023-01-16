@@ -38,6 +38,7 @@ RSpec.describe 'BrailleTranslator' do
   describe '#eng_to_braille_library' do
     it 'can return an array of braille that corresponds to a letter' do
       expect(translator.eng_to_braille['a']).to eq(['0.', '..', '..'])
+      expect(translator.eng_to_braille['z']).to eq(["0.", ".0", "00"])
     end
   end
 
