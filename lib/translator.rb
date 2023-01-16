@@ -1,4 +1,4 @@
-class BrailleTranslator
+class Translator
   attr_reader :eng_to_braille
   def initialize
     @eng_to_braille = eng_to_braille_library 

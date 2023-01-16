@@ -1,13 +1,14 @@
 require './spec/spec_helper'
 
 RSpec.describe 'BrailleTranslator' do
-  let(:translator) { BrailleTranslator.new}
+  let(:translator) { Translator.new}
 
   describe '#initialize' do
     it 'exists' do
-      expect(translator).to be_a(BrailleTranslator)
+      expect(translator).to be_a(Translator)
     end
   end
+
 
   describe 'braille keys' do
     describe 'key1' do

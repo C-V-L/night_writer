@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/lib/braille_translator.rb": {
+      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/lib/translator.rb": {
         "lines": [
           1,
           1,
@@ -76,30 +76,8 @@
           null,
           null
         ]
-      },
-      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/lib/english_translator.rb": {
-        "lines": [
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/spec/english_translator_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1673898070
+    "timestamp": 1673900369
   }
 }
