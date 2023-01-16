@@ -77,7 +77,13 @@ class Translator
         slice
       end
     end.transpose
-    reordered_array
+
+    joined_char_array = reordered_array.map do |line|
+      line.map do |char|
+        char.join
+      end
+    end
+    joined_char_array
   end
 
   def convert_to_english(braille_string)

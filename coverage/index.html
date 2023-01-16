@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T16:08:27-07:00">2023-01-16T16:08:27-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T16:11:57-07:00">2023-01-16T16:11:57-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="yellow">
-  85.71%
+  86.84%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         22.83
+         21.37
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>35</b> relevant lines,
-    <span class="green"><b>30</b> lines covered</span> and
+    <b>38</b> relevant lines,
+    <span class="green"><b>33</b> lines covered</span> and
     <span class="red"><b>5</b> lines missed. </span>
     (<span class="yellow">
-  85.71%
+  86.84%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf6ce7aac592f3cc263a7a2c97cafbf6dc67179d" class="src_link" title="lib/translator.rb">lib/translator.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">85.71 %</td>
-            <td class="cell--number">92</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">30</td>
+            <td class="yellow strong cell--number t-file__coverage">86.84 %</td>
+            <td class="cell--number">98</td>
+            <td class="cell--number">38</td>
+            <td class="cell--number">33</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">22.83</td>
+            <td class="cell--number">21.37</td>
             
           </tr>
         
@@ -103,7 +103,7 @@
     <h3>lib/translator.rb</h3>
     <h4>
       <span class="yellow">
-  85.71%
+  86.84%
 </span>
 
       lines covered
@@ -112,8 +112,8 @@
     
 
     <div class="t-line-summary">
-      <b>35</b> relevant lines.
-      <span class="green"><b>30</b> lines covered</span> and
+      <b>38</b> relevant lines.
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>5</b> lines missed.</span>
     </div>
 
@@ -994,29 +994,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="80">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    reordered_array</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="81">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="82">
+          <li class="never" data-hits="" data-linenumber="80">
             
             
 
@@ -1027,62 +1005,40 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="83">
+          <li class="covered" data-hits="1" data-linenumber="81">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def convert_to_english(braille_string)</code>
+            <code class="ruby">    joined_char_array = reordered_array.map do |line|</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="84">
-            
-            
-
+          <li class="covered" data-hits="3" data-linenumber="82">
+            <span class="hits">3</span>
             
 
-            <code class="ruby">    ordered_array = revert_transposition(braille_string)</code>
+            
+
+            <code class="ruby">      line.map do |char|</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="85">
-            
-            
-
+          <li class="covered" data-hits="9" data-linenumber="83">
+            <span class="hits">9</span>
             
 
-            <code class="ruby">    x = ordered_array.map do |line|</code>
+            
+
+            <code class="ruby">        char.join</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="86">
-            
-            
-
-            
-
-            <code class="ruby">      line.map do |character|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="87">
-            
-            
-
-            
-
-            <code class="ruby">        character.join</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="88">
+          <li class="never" data-hits="" data-linenumber="84">
             
             
 
@@ -1093,7 +1049,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="89">
+          <li class="never" data-hits="" data-linenumber="85">
             
             
 
@@ -1104,18 +1060,18 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="90">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    require &#39;pry&#39;; binding.pry</code>
+            
+
+            <code class="ruby">    joined_char_array</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="91">
+          <li class="never" data-hits="" data-linenumber="87">
             
             
 
@@ -1126,7 +1082,117 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="92">
+          <li class="never" data-hits="" data-linenumber="88">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="89">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def convert_to_english(braille_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="90">
+            
+            
+
+            
+
+            <code class="ruby">    ordered_array = revert_transposition(braille_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="91">
+            
+            
+
+            
+
+            <code class="ruby">    x = ordered_array.map do |line|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="92">
+            
+            
+
+            
+
+            <code class="ruby">      line.map do |character|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="93">
+            
+            
+
+            
+
+            <code class="ruby">        character.join</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="94">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="95">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="96">
+            
+            
+
+            
+
+            <code class="ruby">    require &#39;pry&#39;; binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="97">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="98">
             
             
 
