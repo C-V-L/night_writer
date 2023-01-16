@@ -80,6 +80,13 @@ class Translator
     reordered_array
   end
 
-  
-
+  def convert_to_english(braille_string)
+    ordered_array = revert_transposition(braille_string)
+    x = ordered_array.map do |line|
+      line.map do |character|
+        character.join
+      end
+    end
+    require 'pry'; binding.pry
+  end
 end

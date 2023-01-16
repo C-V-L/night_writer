@@ -62,9 +62,9 @@ RSpec.describe 'Translator' do
   describe '#revert_transposition' do
     it 'can revert a formatted braille stirng to a nested array of braille characters' do
       message = "AABBCC\nAABBCC\nAABBCC"
-      expected = [[["A", "A"], ["A", "A"], ["A", "A"]], 
-                  [["B", "B"], ["B", "B"], ["B", "B"]], 
-                  [["C", "C"], ["C", "C"], ["C", "C"]]]
+      expected = [[["AA"], ["AA"], ["AA"]], 
+                  [["BB"], ["BB"], ["BB"]], 
+                  [["CC"], ["CC"], ["CC"]]]
       expect(translator.revert_transposition(message)).to eq(expected)
     end
   end
