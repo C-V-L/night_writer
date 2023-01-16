@@ -59,7 +59,8 @@ class BrailleTranslator
       braille.join.chars.each_slice(80).map do |slice|
         slice.join
       end
-    end.join("\n")
+    end.transpose.join("\n")
+    
     joined_text
   end
 
@@ -68,5 +69,4 @@ class BrailleTranslator
       eng_to_braille[char]
     end
   end
-
 end

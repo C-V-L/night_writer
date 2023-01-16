@@ -49,7 +49,7 @@ RSpec.describe 'BrailleTranslator' do
     end
   end
 
-  describe '#to_braille' do
+  describe '#formatted_braille_conversion' do
     it 'can take a string of english and convert to braille' do
       message = 'hello'
       expected = "0.0.0.0.0.\n00.00.0..0\n....0.0.0."

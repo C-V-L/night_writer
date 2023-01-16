@@ -65,6 +65,7 @@
           3,
           null,
           null,
+          null,
           1,
           null,
           null,
@@ -73,11 +74,30 @@
           10,
           null,
           null,
+          null
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/lib/english_translator.rb": {
+        "lines": [
+
+        ]
+      },
+      "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/spec/english_translator_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1673893549
+    "timestamp": 1673896223
   }
 }
