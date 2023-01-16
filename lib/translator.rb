@@ -69,4 +69,17 @@ class Translator
       eng_to_braille[char]
     end
   end
+
+  def revert_transposition(braille_string)
+    braille_array = braille_string.split("\n")
+    reordered_array = braille_array.map do |line|
+      line.chars.each_slice(2).map do |slice|
+        slice
+      end
+    end.transpose
+    reordered_array
+  end
+
+  
+
 end
