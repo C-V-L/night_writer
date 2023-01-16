@@ -58,4 +58,12 @@ RSpec.describe 'BrailleTranslator' do
       expect(translator.formatted_braille_conversion(message)).to eq(expected)
     end
   end
+
+  describe '#covert_to_english' do
+    it 'can convert a string of braille to english' do
+      message = "0.0.0.0.0.\n00.00.0..0\n....0.0.0."
+      expected = 'hello'
+      expect(translator.convert_to_english(message)).to eq(expected)
+    end
+  end
 end

@@ -64,8 +64,8 @@ class Translator
     joined_text
   end
 
-  def convert_to_braille(text)
-    text.chars.map do |char|
+  def convert_to_braille(eng_string)
+    eng_string.chars.map do |char|
       eng_to_braille[char]
     end
   end
