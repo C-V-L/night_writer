@@ -2,7 +2,6 @@ class BrailleTranslator
   attr_reader :eng_to_braille
   def initialize
     @eng_to_braille = eng_to_braille_library 
-
   end
 
   def key1
@@ -51,5 +50,13 @@ class BrailleTranslator
     'z' => [key2, key3, key1],
     ' ' => [key4, key4, key4]
     }
+  end
+
+  def to_braille(text)
+    braille_text = []
+    text.chars.map do |char|
+      braille_text << eng_to_braille[char]
+    end
+    braille_text.transpose.flatten
   end
 end
