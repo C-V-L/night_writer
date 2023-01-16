@@ -79,7 +79,9 @@
       },
       "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/lib/english_translator.rb": {
         "lines": [
-
+          1,
+          null,
+          null
         ]
       },
       "/Users/connervanloan/Desktop/turing/1mod/projects/night_writer/spec/english_translator_spec.rb": {
@@ -98,6 +100,6 @@
         ]
       }
     },
-    "timestamp": 1673896223
+    "timestamp": 1673896274
   }
 }
