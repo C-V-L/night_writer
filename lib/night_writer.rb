@@ -1,10 +1,14 @@
+require_relative 'braille_translator'
 
 @user_input = ARGV 
 
-file_path = File.read(ARGV[0])
-new_file = File.new(ARGV[1], 'w+')
+translator = BrailleTranslator.new
 
-new_file.write(file_path.reverse)
-puts "Created #{ARGV[1]} containing #{file_path.length} characters"
+read_message = File.read(ARGV[0])
+new_file = File.new(ARGV[1], 'w+')
+# require 'pry'; binding.pry
+translation = translator.to_braille(read_message)
+new_file.write(translation)
+puts "Created #{ARGV[1]} containing #{read_message.length} characters"
 
 new_file.close
