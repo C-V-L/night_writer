@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T10:52:55-07:00">2023-01-16T10:52:55-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T12:41:10-07:00">2023-01-16T12:41:10-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         30.25
+         23.57
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>1</b> files in total.
+    <b>3</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>20</b> relevant lines,
-    <span class="green"><b>20</b> lines covered</span> and
+    <b>30</b> relevant lines,
+    <span class="green"><b>30</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -73,11 +73,33 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5255959d828550c414dd9eb2382fb985cb094637" class="src_link" title="lib/braille_translator.rb">lib/braille_translator.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">65</td>
-            <td class="cell--number">20</td>
-            <td class="cell--number">20</td>
+            <td class="cell--number">72</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">23</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">30.25</td>
+            <td class="cell--number">30.39</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#1b8a0cdaef090b6650d6cc154f4c10921e905ff0" class="src_link" title="lib/english_translator.rb">lib/english_translator.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">1</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#30b82f19407e64a483d6c41893e25ab72f28051c" class="src_link" title="spec/english_translator_spec.rb">spec/english_translator_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.17</td>
             
           </tr>
         
@@ -112,8 +134,8 @@
     
 
     <div class="t-line-summary">
-      <b>20</b> relevant lines.
-      <span class="green"><b>20</b> lines covered</span> and
+      <b>23</b> relevant lines.
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -158,8 +180,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="4">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="8" data-linenumber="4">
+            <span class="hits">8</span>
             
 
             
@@ -202,8 +224,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="155" data-linenumber="8">
-            <span class="hits">155</span>
+          <li class="covered" data-hits="177" data-linenumber="8">
+            <span class="hits">177</span>
             
 
             
@@ -246,8 +268,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="197" data-linenumber="12">
-            <span class="hits">197</span>
+          <li class="covered" data-hits="225" data-linenumber="12">
+            <span class="hits">225</span>
             
 
             
@@ -290,8 +312,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="85" data-linenumber="16">
-            <span class="hits">85</span>
+          <li class="covered" data-hits="97" data-linenumber="16">
+            <span class="hits">97</span>
             
 
             
@@ -334,8 +356,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="134" data-linenumber="20">
-            <span class="hits">134</span>
+          <li class="covered" data-hits="153" data-linenumber="20">
+            <span class="hits">153</span>
             
 
             
@@ -389,8 +411,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="25">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="8" data-linenumber="25">
+            <span class="hits">8</span>
             
 
             
@@ -725,7 +747,7 @@
 
             
 
-            <code class="ruby">  def to_braille(text)</code>
+            <code class="ruby">  def formatted_braille_conversion(text)</code>
           </li>
         </div>
       
@@ -736,34 +758,12 @@
 
             
 
-            <code class="ruby">    braille_text = text.chars.map do |char|</code>
+            <code class="ruby">    braille_characters = convert_to_braille(text)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="57">
-            <span class="hits">5</span>
-            
-
-            
-
-            <code class="ruby">      eng_to_braille[char]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="58">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="59">
+          <li class="never" data-hits="" data-linenumber="57">
             
             
 
@@ -774,24 +774,46 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="60">
+          <li class="covered" data-hits="1" data-linenumber="58">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    joined_text = braille_text.transpose.map do |braille|</code>
+            <code class="ruby">    joined_text = braille_characters.transpose.map do |braille|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="61">
+          <li class="covered" data-hits="3" data-linenumber="59">
             <span class="hits">3</span>
             
 
             
 
-            <code class="ruby">      braille.join</code>
+            <code class="ruby">      braille.join.chars.each_slice(80).map do |slice|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="60">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">        slice.join</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="61">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -802,23 +824,34 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">    end.transpose.join(&quot;\n&quot;)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="63">
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    joined_text.join(&quot;\n&quot;)</code>
+            <code class="ruby">    joined_text</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="64">
+          <li class="never" data-hits="" data-linenumber="65">
             
             
 
@@ -829,7 +862,289 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="65">
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def convert_to_braille(text)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="68">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    text.chars.map do |char|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="69">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">      eng_to_braille[char]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="1b8a0cdaef090b6650d6cc154f4c10921e905ff0">
+  <div class="header">
+    <h3>lib/english_translator.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>1</b> relevant lines.
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class EnglishTranslator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="30b82f19407e64a483d6c41893e25ab72f28051c">
+  <div class="header">
+    <h3>spec/english_translator_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;./spec/spec_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;EnglishTranslator&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="4">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">  let(:translator) { EnglishTranslator.new}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;#initialize&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;exists&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(translator).to be_a(EnglishTranslator)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 

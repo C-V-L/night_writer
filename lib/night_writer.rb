@@ -7,7 +7,7 @@ translator = BrailleTranslator.new
 read_message = File.read(ARGV[0])
 new_file = File.new(ARGV[1], 'w+')
 # require 'pry'; binding.pry
-translation = translator.to_braille(read_message)
+translation = translator.formatted_braille_conversion(read_message)
 new_file.write(translation)
 puts "Created #{ARGV[1]} containing #{read_message.length} characters"
 
