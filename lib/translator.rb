@@ -78,10 +78,11 @@ class Translator
     parsed_array = parse_array(braille_array)
     transposed_parsed_array = transpose_parsed_array(parsed_array)
     joined_char_array = join_transposed_array(transposed_parsed_array)
-
-    translated_text = joined_char_array.filter_map do |line|
-      eng_to_braille.key(line)
-    end.join
+    translated_text = joined_char_array.each_slice(80).map do |slice|
+      slice.filter_map do |line|
+        eng_to_braille.key(line)
+      end.join
+    end.join("\n")
   end
 
   def parse_array(braille_array)

@@ -13,23 +13,8 @@ class FileHandler
     count
   end
 
-  def self.open_new_file
-    File.open(ARGV[1],"r")
+  def self.count_outgoing_characters
+    count = read_file.read.gsub("\n", '').length / 6
+    count
   end
-  
 end
-
-# require_relative 'translator'
-
-# @user_input = ARGV 
-
-# translator = Translator.new
-
-# read_message = File.read(ARGV[0])
-# new_file = File.new(ARGV[1], 'w+')
-
-# translation = translator.formatted_braille_conversion(read_message)
-# new_file.write(translation)
-# p "Created #{ARGV[1]} containing #{read_message.length} characters"
-
-# new_file.close
