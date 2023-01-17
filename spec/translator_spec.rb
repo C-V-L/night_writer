@@ -107,34 +107,11 @@ RSpec.describe 'Translator' do
         end
       end
 
-      xdescribe '#braille_to_english' do
-        it 'can read braille in array format and produce an english string' do
-          
-        end
-      end
-
-      xdescribe '#revert_transposition' do
-        it 'can revert a formatted braille stirng to a nested array of braille characters' do
-          message = "AABBCC\nAABBCC\nAABBCC"
-          expected = [["AA", "AA", "AA"], 
-                      ["BB", "BB", "BB"], 
-                      ["CC", "CC", "CC"]]
-
-          expect(translator.revert_transposition(message)).to eq(expected)
-        end
-
-        it 'can handle more than 40 characters' do
-          message = 
-          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\nCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\nAAAA\nBBBB\nCCCC"
-          expected = [["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"]]
-
-          expect(translator.revert_transposition(message)).to eq(expected)
+      describe '#braille_to_english' do
+        it 'can read braille and produce an english string' do
+          braille_string = ("0.0.0.0.0.\n00.00.0..0\n....0.0.0.")
+          expected = "hello"
+          expect(translator.convert_to_english(braille_string)).to eq(expected)
         end
       end
     end
