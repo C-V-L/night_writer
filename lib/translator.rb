@@ -72,27 +72,30 @@ class Translator
 
   ##Needs line break at 40 chars
 
+  def convert_to_english(braille_string)
+    ordered_array = revert_transposition(braille_string)
+    ordered_array.map do |line|
+      eng_to_braille.key(line)
+    end.join
+  end
+
+  
   def revert_transposition(braille_string)
     braille_array = braille_string.split("\n")
-
     parsed_array = parse_array(braille_array)
-    # braille_array.map do |line|
-    #   line.chars.each_slice(2).map do |slice|
-    #     slice
-    #   end
+    transposed_parsed_array = transpose_parsed_array(parsed_array)
+    # x = parsed_array.each_slice(3).flat_map do |arrays|
+    #   arrays.transpose
     # end
-    x = parsed_array.each_slice(3).flat_map do |arrays|
-      arrays.transpose
-    end
     
-    joined_char_array = x.map do |line|
+    joined_char_array = transposed_parsed_array.map do |line|
       line.map do |char|
         char.join
       end
     end
     joined_char_array
   end
-
+  
   def parse_array(braille_array)
     braille_array.map do |line|
       line.chars.each_slice(2).map do |slice|
@@ -101,11 +104,10 @@ class Translator
     end
   end
 
-  def convert_to_english(braille_string)
-    ordered_array = revert_transposition(braille_string)
-    ordered_array.map do |line|
-      eng_to_braille.key(line)
-    end.join
+  def transpose_parsed_array(parsed_array)
+    parsed_array.each_slice(3).flat_map do |arrays|
+      arrays.transpose
+    end
   end
 
 end
