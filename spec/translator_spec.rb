@@ -92,6 +92,16 @@ RSpec.describe 'Translator' do
         end
       end
 
+      describe '#join_transposed_array' do
+        it 'it can join a transposed array of braille into readable braille' do
+          transposed_array = [[["A", "A"], ["B", "B"], ["C", "C"]], 
+                                      [["A", "A"], ["B", "B"], ["C", "C"]], 
+                                      [["A", "A"], ["B", "B"], ["C", "C"]]]
+          expected_joined_array = []
+          expect(translator.join_transposed_array(transposed_array)).to eq([])
+        end
+      end
+
       describe '#revert_transposition' do
         it 'can revert a formatted braille stirng to a nested array of braille characters' do
           message = "AABBCC\nAABBCC\nAABBCC"

@@ -84,10 +84,7 @@ class Translator
     braille_array = braille_string.split("\n")
     parsed_array = parse_array(braille_array)
     transposed_parsed_array = transpose_parsed_array(parsed_array)
-    # x = parsed_array.each_slice(3).flat_map do |arrays|
-    #   arrays.transpose
-    # end
-    
+        
     joined_char_array = transposed_parsed_array.map do |line|
       line.map do |char|
         char.join
