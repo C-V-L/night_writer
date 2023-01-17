@@ -75,8 +75,20 @@ RSpec.describe 'Translator' do
           expected_parsed_array = [[["A", "A"], ["A", "A"], ["A", "A"]], 
                                   [["B", "B"], ["B", "B"], ["B", "B"]], 
                                   [["C", "C"], ["C", "C"], ["C", "C"]]]
-                                  
+
           expect(translator.parse_array(array_argument)).to eq(expected_parsed_array)
+        end
+      end
+
+      describe '#transpose_parsed_array' do
+        it 'takes a parsed array and transposed it to readable braille' do
+          parsed_array = [[["A", "A"], ["A", "A"], ["A", "A"]], 
+                          [["B", "B"], ["B", "B"], ["B", "B"]], 
+                          [["C", "C"], ["C", "C"], ["C", "C"]]]
+          expected_transposed_array = [[["A", "A"], ["B", "B"], ["C", "C"]], 
+                                      [["A", "A"], ["B", "B"], ["C", "C"]], 
+                                      [["A", "A"], ["B", "B"], ["C", "C"]]]
+          expect(translator.transpose_parsed_array(parsed_array)).to eq(expected_transposed_array)
         end
       end
 
