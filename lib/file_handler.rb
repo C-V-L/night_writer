@@ -5,9 +5,9 @@ class FileHandler
     File.open(ARGV[0], 'r')
   end
 
-  # def self.write_file
-  #   File.new(ARGV[1], 'w+')
-  # end
+  def self.write_file
+    File.new(ARGV[1], 'w+')
+  end
 
   # def out_put_char_count
     
