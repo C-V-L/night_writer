@@ -1,4 +1,5 @@
 class Translator
+
   attr_reader :eng_to_braille
   def initialize
     @eng_to_braille = eng_to_braille_library 
@@ -65,7 +66,7 @@ class Translator
   end
 
   def convert_to_braille(eng_string)
-    eng_string.chars.map do |char|
+    eng_string.chars.filter_map do |char|
       eng_to_braille[char]
     end
   end
@@ -78,24 +79,10 @@ class Translator
     transposed_parsed_array = transpose_parsed_array(parsed_array)
     joined_char_array = join_transposed_array(transposed_parsed_array)
 
-    translated_text = joined_char_array.map do |line|
+    translated_text = joined_char_array.filter_map do |line|
       eng_to_braille.key(line)
     end.join
-require 'pry'; binding.pry
-    # ordered_array = revert_transposition(braille_string)
-    # ordered_array.map do |line|
-    #   eng_to_braille.key(line)
-    # end.join
   end
-
-  
-  # def revert_transposition(braille_string)
-  #   braille_array = braille_string.split("\n")
-  #   parsed_array = parse_array(braille_array)
-  #   transposed_parsed_array = transpose_parsed_array(parsed_array)
-  #   joined_char_array = join_transposed_array(transposed_parsed_array)
-  #   joined_char_array
-  # end
   
   def parse_array(braille_array)
     braille_array.map do |line|

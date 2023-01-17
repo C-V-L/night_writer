@@ -1,6 +1,5 @@
 class FileHandler
 
-
   def self.read_file
     File.open(ARGV[0], 'r')
   end
@@ -9,9 +8,11 @@ class FileHandler
     File.new(ARGV[1], 'w+')
   end
 
-  # def out_put_char_count
-    
-  # end
+  def self.count_incoming_characters
+    count = read_file.read.gsub("\n", '').length
+    count
+  end
+
 end
 
 # require_relative 'translator'
