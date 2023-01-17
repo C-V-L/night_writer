@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-17T15:30:25-07:00">2023-01-17T15:30:25-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-17T15:44:50-07:00">2023-01-17T15:44:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="yellow">
-  87.39%
+      <span class="green">
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         8.1
+         11.73
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>111</b> relevant lines,
-    <span class="green"><b>97</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed. </span>
-    (<span class="yellow">
-  87.39%
+    <b>114</b> relevant lines,
+    <span class="green"><b>114</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
+    (<span class="green">
+  100.0%
 </span>
 )
   </div>
@@ -73,9 +73,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cfdb356d05b66c13adb03af1282693bcdf6e82b7" class="src_link" title="lib/file_handler.rb">lib/file_handler.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -83,23 +83,23 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf6ce7aac592f3cc263a7a2c97cafbf6dc67179d" class="src_link" title="lib/translator.rb">lib/translator.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">95.24 %</td>
-            <td class="cell--number">108</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">109</td>
             <td class="cell--number">42</td>
-            <td class="cell--number">40</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">19.83</td>
+            <td class="cell--number">42</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">29.81</td>
             
           </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a1a96cfa8acf7eb2f615e4220a46f74f3b8a9a89" class="src_link" title="spec/translator_spec.rb">spec/translator_spec.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">80.33 %</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">118</td>
             <td class="cell--number">61</td>
-            <td class="cell--number">49</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">0.95</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.21</td>
             
           </tr>
         
@@ -134,8 +134,8 @@
     
 
     <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -307,6 +307,61 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.count_outgoing_characters</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    count = read_file.read.gsub(&quot;\n&quot;, &#39;&#39;).length / 6</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
             <code class="ruby">end</code>
           </li>
         </div>
@@ -321,7 +376,7 @@
     <h3>lib/translator.rb</h3>
     <h4>
       <span class="green">
-  95.24%
+  100.0%
 </span>
 
       lines covered
@@ -331,8 +386,8 @@
 
     <div class="t-line-summary">
       <b>42</b> relevant lines.
-      <span class="green"><b>40</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>42</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -387,8 +442,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="5">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="5">
+            <span class="hits">13</span>
             
 
             
@@ -431,8 +486,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="199" data-linenumber="9">
-            <span class="hits">199</span>
+          <li class="covered" data-hits="287" data-linenumber="9">
+            <span class="hits">287</span>
             
 
             
@@ -475,8 +530,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="253" data-linenumber="13">
-            <span class="hits">253</span>
+          <li class="covered" data-hits="365" data-linenumber="13">
+            <span class="hits">365</span>
             
 
             
@@ -519,8 +574,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="109" data-linenumber="17">
-            <span class="hits">109</span>
+          <li class="covered" data-hits="157" data-linenumber="17">
+            <span class="hits">157</span>
             
 
             
@@ -563,8 +618,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="172" data-linenumber="21">
-            <span class="hits">172</span>
+          <li class="covered" data-hits="248" data-linenumber="21">
+            <span class="hits">248</span>
             
 
             
@@ -618,8 +673,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="26">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="13" data-linenumber="26">
+            <span class="hits">13</span>
             
 
             
@@ -1179,8 +1234,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="77">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="77">
+            <span class="hits">2</span>
             
 
             
@@ -1190,8 +1245,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="78">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="78">
+            <span class="hits">2</span>
             
 
             
@@ -1201,8 +1256,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="79">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="79">
+            <span class="hits">2</span>
             
 
             
@@ -1212,8 +1267,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="80">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="80">
+            <span class="hits">2</span>
             
 
             
@@ -1223,35 +1278,35 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="81">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="2" data-linenumber="81">
+            <span class="hits">2</span>
             
 
             
 
-            <code class="ruby">require &#39;pry&#39;; binding.pry</code>
+            <code class="ruby">    translated_text = joined_char_array.each_slice(80).map do |slice|</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="82">
-            
-            
-
+          <li class="covered" data-hits="2" data-linenumber="82">
+            <span class="hits">2</span>
             
 
-            <code class="ruby">    translated_text = joined_char_array.filter_map do |line|</code>
+            
+
+            <code class="ruby">      slice.filter_map do |line|</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="83">
-            
-            
-
+          <li class="covered" data-hits="10" data-linenumber="83">
+            <span class="hits">10</span>
             
 
-            <code class="ruby">      eng_to_braille.key(line)</code>
+            
+
+            <code class="ruby">        eng_to_braille.key(line)</code>
           </li>
         </div>
       
@@ -1262,7 +1317,7 @@
 
             
 
-            <code class="ruby">    end.join</code>
+            <code class="ruby">      end.join</code>
           </li>
         </div>
       
@@ -1273,7 +1328,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end.join(&quot;\n&quot;)</code>
           </li>
         </div>
       
@@ -1284,18 +1339,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="87">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="87">
+            
             
 
             
 
-            <code class="ruby">  def parse_array(braille_array)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1306,7 +1361,7 @@
 
             
 
-            <code class="ruby">    braille_array.map do |line|</code>
+            <code class="ruby">  def parse_array(braille_array)</code>
           </li>
         </div>
       
@@ -1317,29 +1372,29 @@
 
             
 
+            <code class="ruby">    braille_array.map do |line|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="9" data-linenumber="90">
+            <span class="hits">9</span>
+            
+
+            
+
             <code class="ruby">      line.chars.each_slice(2).map do |slice|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="15" data-linenumber="90">
-            <span class="hits">15</span>
+          <li class="covered" data-hits="39" data-linenumber="91">
+            <span class="hits">39</span>
             
 
             
 
             <code class="ruby">        slice</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="91">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1350,7 +1405,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1361,7 +1416,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1372,18 +1427,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="95">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="95">
+            
             
 
             
 
-            <code class="ruby">  def transpose_parsed_array(parsed_array)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1394,29 +1449,29 @@
 
             
 
+            <code class="ruby">  def transpose_parsed_array(parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="97">
+            <span class="hits">3</span>
+            
+
+            
+
             <code class="ruby">    parsed_array.each_slice(3).flat_map do |arrays|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="97">
-            <span class="hits">1</span>
+          <li class="covered" data-hits="3" data-linenumber="98">
+            <span class="hits">3</span>
             
 
             
 
             <code class="ruby">      arrays.transpose</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="98">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1427,7 +1482,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -1438,18 +1493,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="101">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="101">
+            
             
 
             
 
-            <code class="ruby">  def join_transposed_array(transposed_parsed_array)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -1460,13 +1515,24 @@
 
             
 
+            <code class="ruby">  def join_transposed_array(transposed_parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="103">
+            <span class="hits">3</span>
+            
+
+            
+
             <code class="ruby">    transposed_parsed_array.map do |line|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="103">
-            <span class="hits">5</span>
+          <li class="covered" data-hits="13" data-linenumber="104">
+            <span class="hits">13</span>
             
 
             
@@ -1476,24 +1542,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="15" data-linenumber="104">
-            <span class="hits">15</span>
+          <li class="covered" data-hits="39" data-linenumber="105">
+            <span class="hits">39</span>
             
 
             
 
             <code class="ruby">        char.join</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="105">
-            
-            
-
-            
-
-            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1504,7 +1559,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1515,12 +1570,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="109">
             
             
 
@@ -1539,8 +1605,8 @@
   <div class="header">
     <h3>spec/translator_spec.rb</h3>
     <h4>
-      <span class="yellow">
-  80.33%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -1550,8 +1616,8 @@
 
     <div class="t-line-summary">
       <b>61</b> relevant lines.
-      <span class="green"><b>49</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="green"><b>61</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -1595,8 +1661,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="4">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="14" data-linenumber="4">
+            <span class="hits">14</span>
             
 
             
@@ -2398,8 +2464,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="77">
-            
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
             
 
             
@@ -2409,8 +2475,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="78">
-            
+          <li class="covered" data-hits="1" data-linenumber="78">
+            <span class="hits">1</span>
             
 
             
@@ -2453,8 +2519,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="82">
-            
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
             
 
             
@@ -2519,8 +2585,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="88">
-            
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
             
 
             
@@ -2552,8 +2618,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="91">
-            
+          <li class="covered" data-hits="1" data-linenumber="91">
+            <span class="hits">1</span>
             
 
             
@@ -2585,8 +2651,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="94">
-            
+          <li class="covered" data-hits="1" data-linenumber="94">
+            <span class="hits">1</span>
             
 
             
@@ -2651,8 +2717,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="100">
-            
+          <li class="covered" data-hits="1" data-linenumber="100">
+            <span class="hits">1</span>
             
 
             
@@ -2684,8 +2750,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="103">
-            
+          <li class="covered" data-hits="1" data-linenumber="103">
+            <span class="hits">1</span>
             
 
             
@@ -2706,8 +2772,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="105">
-            
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
             
 
             
@@ -2772,8 +2838,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="111">
-            
+          <li class="covered" data-hits="1" data-linenumber="111">
+            <span class="hits">1</span>
             
 
             
@@ -2783,8 +2849,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="112">
-            
+          <li class="covered" data-hits="1" data-linenumber="112">
+            <span class="hits">1</span>
             
 
             
@@ -2794,8 +2860,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="113">
-            
+          <li class="covered" data-hits="1" data-linenumber="113">
+            <span class="hits">1</span>
             
 
             
