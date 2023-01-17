@@ -58,35 +58,51 @@ RSpec.describe 'Translator' do
       expect(translator.formatted_braille_conversion(message)).to eq(expected)
     end
   end
-
-  describe '#revert_transposition' do
-    it 'can revert a formatted braille stirng to a nested array of braille characters' do
-      message = "AABBCC\nAABBCC\nAABBCC"
-      expected = [["AA", "AA", "AA"], 
-                  ["BB", "BB", "BB"], 
-                  ["CC", "CC", "CC"]]
-      expect(translator.revert_transposition(message)).to eq(expected)
-    end
-
-    it 'can handle more than 40 characters' do
-      message = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\nCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\nAAAA\nBBBB\nCCCC"
-
-      expected = [["AA", "BB", "CC"], ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
-                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"]]
-      expect(translator.revert_transposition(message)).to eq(expected)
-    end
-  end
-
-  xdescribe '#convert_to_english' do
+  
+  context '#convert_to_english' do
     it 'can convert a string of braille to english' do
       message = "0.0.0.0.0.\n00.00.0..0\n....0.0.0."
       expected = 'hello'
       expect(translator.convert_to_english(message)).to eq(expected)
     end
   end
+
+    describe '#convert_to_english helper methods' do
+
+      describe '#parse_array' do
+        it 'can seperate arrays by every two characters' do
+          array_argument = ["AAAAAA", "BBBBBB","CCCCCC"]
+          expected_parsed_array = [[["A", "A"], ["A", "A"], ["A", "A"]], 
+                                  [["B", "B"], ["B", "B"], ["B", "B"]], 
+                                  [["C", "C"], ["C", "C"], ["C", "C"]]]
+                                  
+          expect(translator.parse_array(array_argument)).to eq(expected_parsed_array)
+        end
+      end
+
+      describe '#revert_transposition' do
+        it 'can revert a formatted braille stirng to a nested array of braille characters' do
+          message = "AABBCC\nAABBCC\nAABBCC"
+          expected = [["AA", "AA", "AA"], 
+                      ["BB", "BB", "BB"], 
+                      ["CC", "CC", "CC"]]
+          expect(translator.revert_transposition(message)).to eq(expected)
+        end
+
+        it 'can handle more than 40 characters' do
+          message = 
+          "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\nCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\nAAAA\nBBBB\nCCCC"
+
+          expected = [["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                      ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"]]
+          expect(translator.revert_transposition(message)).to eq(expected)
+        end
+      end
+    end
+
 end
