@@ -16,4 +16,11 @@ RSpec.describe 'FileHandler' do
       expect(FileHandler.write_file).to be_a(File)
     end
   end
+
+  describe '#count_incoming_characters' do
+    it 'can count the characters of the incoming file' do
+      allow(File).to receive(:open).and_return(File.open('./fixtures/hello_world_fixture.txt', 'r'))
+      expect(FileHandler.count_incoming_characters).to eq(11)
+    end
+  end
 end
