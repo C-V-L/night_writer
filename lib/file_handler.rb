@@ -8,12 +8,12 @@ class FileHandler
     File.new(ARGV[1], 'w+')
   end
 
-  def self.count_incoming_characters
+  def self.count_english_characters
     count = read_file.read.gsub("\n", '').length
     count
   end
 
-  def self.count_outgoing_characters
+  def self.count_braille_characters
     count = read_file.read.gsub("\n", '').length / 6
     count
   end
