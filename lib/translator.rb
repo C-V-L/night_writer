@@ -73,25 +73,29 @@ class Translator
   ##Needs line break at 40 chars
 
   def convert_to_english(braille_string)
-    ordered_array = revert_transposition(braille_string)
-    ordered_array.map do |line|
-      eng_to_braille.key(line)
-    end.join
-  end
-
-  
-  def revert_transposition(braille_string)
     braille_array = braille_string.split("\n")
     parsed_array = parse_array(braille_array)
     transposed_parsed_array = transpose_parsed_array(parsed_array)
+    joined_char_array = join_transposed_array(transposed_parsed_array)
 
-    # joined_char_array = transposed_parsed_array.map do |line|
-    #   line.map do |char|
-    #     char.join
-    #   end
-    # end
-    # joined_char_array
+    ordered_array = joined_char_array.map do |line|
+      eng_to_braille.key(line)
+    end.join
+
+    # ordered_array = revert_transposition(braille_string)
+    # ordered_array.map do |line|
+    #   eng_to_braille.key(line)
+    # end.join
   end
+
+  
+  # def revert_transposition(braille_string)
+  #   braille_array = braille_string.split("\n")
+  #   parsed_array = parse_array(braille_array)
+  #   transposed_parsed_array = transpose_parsed_array(parsed_array)
+  #   joined_char_array = join_transposed_array(transposed_parsed_array)
+  #   joined_char_array
+  # end
   
   def parse_array(braille_array)
     braille_array.map do |line|
@@ -107,12 +111,11 @@ class Translator
     end
   end
 
-  def join_transposed_array(transposed_array)
-    transposed_array.map do |line|
+  def join_transposed_array(transposed_parsed_array)
+    transposed_parsed_array.map do |line|
       line.map do |char|
         char.join
       end
     end
   end
-
 end
