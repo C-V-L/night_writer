@@ -9,7 +9,6 @@ RSpec.describe 'Translator' do
     end
   end
 
-
   describe 'braille keys' do
     describe 'key1' do
       it 'returns a string of braille' do

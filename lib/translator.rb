@@ -67,7 +67,7 @@ class Translator
 
   def convert_to_braille(eng_string)
     eng_string.chars.filter_map do |char|
-      eng_to_braille[char]
+      eng_to_braille[char] if eng_to_braille.key?(char)
     end
   end
 
@@ -83,7 +83,7 @@ class Translator
       eng_to_braille.key(line)
     end.join
   end
-  
+
   def parse_array(braille_array)
     braille_array.map do |line|
       line.chars.each_slice(2).map do |slice|

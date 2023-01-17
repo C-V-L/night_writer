@@ -13,6 +13,10 @@ class FileHandler
     count
   end
 
+  def self.open_new_file
+    File.open(ARGV[1],"r")
+  end
+  
 end
 
 # require_relative 'translator'
