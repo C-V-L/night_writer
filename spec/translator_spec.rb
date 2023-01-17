@@ -67,6 +67,15 @@ RSpec.describe 'Translator' do
                   ["CC", "CC", "CC"]]
       expect(translator.revert_transposition(message)).to eq(expected)
     end
+
+    it 'can handle more than 40 characters' do
+      message = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n
+                BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\n
+                CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\n
+                AAAA\nBBBB\nCCCC"
+      expected = ''
+      expect(translator.revert_transposition(message)).to eq(expected)
+    end
   end
 
   describe '#convert_to_english' do
