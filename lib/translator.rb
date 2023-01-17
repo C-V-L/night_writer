@@ -78,10 +78,10 @@ class Translator
     transposed_parsed_array = transpose_parsed_array(parsed_array)
     joined_char_array = join_transposed_array(transposed_parsed_array)
 
-    ordered_array = joined_char_array.map do |line|
+    translated_text = joined_char_array.map do |line|
       eng_to_braille.key(line)
     end.join
-
+require 'pry'; binding.pry
     # ordered_array = revert_transposition(braille_string)
     # ordered_array.map do |line|
     #   eng_to_braille.key(line)

@@ -2,7 +2,7 @@ require './spec/spec_helper'
 
 RSpec.describe 'Translator' do
   let(:translator) { Translator.new}
-
+  
   describe '#initialize' do
     it 'exists' do
       expect(translator).to be_a(Translator)
@@ -103,6 +103,12 @@ RSpec.describe 'Translator' do
         end
       end
 
+      xdescribe '#braille_to_english' do
+        it 'can read braille in array format and produce an english string' do
+          
+        end
+      end
+
       xdescribe '#revert_transposition' do
         it 'can revert a formatted braille stirng to a nested array of braille characters' do
           message = "AABBCC\nAABBCC\nAABBCC"
@@ -123,7 +129,7 @@ RSpec.describe 'Translator' do
                       ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
                       ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
                       ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"]]
-                      
+
           expect(translator.revert_transposition(message)).to eq(expected)
         end
       end

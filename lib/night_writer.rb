@@ -9,6 +9,6 @@ new_file = File.new(ARGV[1], 'w+')
 
 translation = translator.formatted_braille_conversion(read_message)
 new_file.write(translation)
-puts "Created #{ARGV[1]} containing #{read_message.length} characters"
+p "Created #{ARGV[1]} containing #{read_message.length} characters"
 
 new_file.close
