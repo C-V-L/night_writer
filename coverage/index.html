@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-16T17:35:33-07:00">2023-01-16T17:35:33-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-01-17T15:46:23-07:00">2023-01-17T15:46:23-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  92.11%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         31.68
+         11.73
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>1</b> files in total.
+    <b>3</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>38</b> relevant lines,
-    <span class="green"><b>35</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed. </span>
+    <b>114</b> relevant lines,
+    <span class="green"><b>114</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  92.11%
+  100.0%
 </span>
 )
   </div>
@@ -71,13 +71,35 @@
       <tbody>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#cfdb356d05b66c13adb03af1282693bcdf6e82b7" class="src_link" title="lib/file_handler.rb">lib/file_handler.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#cf6ce7aac592f3cc263a7a2c97cafbf6dc67179d" class="src_link" title="lib/translator.rb">lib/translator.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">92.11 %</td>
-            <td class="cell--number">98</td>
-            <td class="cell--number">38</td>
-            <td class="cell--number">35</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">31.68</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">109</td>
+            <td class="cell--number">42</td>
+            <td class="cell--number">42</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">29.81</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#a1a96cfa8acf7eb2f615e4220a46f74f3b8a9a89" class="src_link" title="spec/translator_spec.rb">spec/translator_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">118</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.21</td>
             
           </tr>
         
@@ -98,12 +120,12 @@
 
       <div class="source_files">
       
-        <div class="source_table" id="cf6ce7aac592f3cc263a7a2c97cafbf6dc67179d">
+        <div class="source_table" id="cfdb356d05b66c13adb03af1282693bcdf6e82b7">
   <div class="header">
-    <h3>lib/translator.rb</h3>
+    <h3>lib/file_handler.rb</h3>
     <h4>
       <span class="green">
-  92.11%
+  100.0%
 </span>
 
       lines covered
@@ -112,9 +134,9 @@
     
 
     <div class="t-line-summary">
-      <b>38</b> relevant lines.
-      <span class="green"><b>35</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -131,18 +153,18 @@
 
             
 
-            <code class="ruby">class Translator</code>
+            <code class="ruby">class FileHandler</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="2">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="2">
+            
             
 
             
 
-            <code class="ruby">  attr_reader :eng_to_braille</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -153,18 +175,18 @@
 
             
 
-            <code class="ruby">  def initialize</code>
+            <code class="ruby">  def self.read_file</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="4">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    @eng_to_braille = eng_to_braille_library </code>
+            <code class="ruby">    File.open(ARGV[0], &#39;r&#39;)</code>
           </li>
         </div>
       
@@ -197,18 +219,18 @@
 
             
 
-            <code class="ruby">  def key1</code>
+            <code class="ruby">  def self.write_file</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="221" data-linenumber="8">
-            <span class="hits">221</span>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    &#39;00&#39;</code>
+            <code class="ruby">    File.new(ARGV[1], &#39;w+&#39;)</code>
           </li>
         </div>
       
@@ -241,29 +263,29 @@
 
             
 
-            <code class="ruby">  def key2</code>
+            <code class="ruby">  def self.count_english_characters</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="281" data-linenumber="12">
-            <span class="hits">281</span>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    &#39;0.&#39;</code>
+            <code class="ruby">    count = read_file.read.gsub(&quot;\n&quot;, &#39;&#39;).length</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">    count</code>
           </li>
         </div>
       
@@ -274,12 +296,274 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def self.count_braille_characters</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    count = read_file.read.gsub(&quot;\n&quot;, &#39;&#39;).length / 6</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    count</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="cf6ce7aac592f3cc263a7a2c97cafbf6dc67179d">
+  <div class="header">
+    <h3>lib/translator.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>42</b> relevant lines.
+      <span class="green"><b>42</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class Translator</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attr_reader :eng_to_braille</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def initialize</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="5">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    @eng_to_braille = eng_to_braille_library </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def key1</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="287" data-linenumber="9">
+            <span class="hits">287</span>
+            
+
+            
+
+            <code class="ruby">    &#39;00&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def key2</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="365" data-linenumber="13">
+            <span class="hits">365</span>
+            
+
+            
+
+            <code class="ruby">    &#39;0.&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
             <span class="hits">1</span>
             
 
@@ -290,13 +574,1232 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="121" data-linenumber="16">
-            <span class="hits">121</span>
+          <li class="covered" data-hits="157" data-linenumber="17">
+            <span class="hits">157</span>
             
 
             
 
             <code class="ruby">    &#39;.0&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="18">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def key4</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="248" data-linenumber="21">
+            <span class="hits">248</span>
+            
+
+            
+
+            <code class="ruby">    &#39;..&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="22">
+            
+            
+
+            
+
+            <code class="ruby">  end </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="23">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def eng_to_braille_library</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
+            <code class="ruby">    { </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="26">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">    &#39;a&#39; =&gt; [key2, key4, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="27">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;b&#39; =&gt; [key2, key2, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="28">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;c&#39; =&gt; [key1, key4, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;d&#39; =&gt; [key1, key3, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;e&#39; =&gt; [key2, key3, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;f&#39; =&gt; [key1, key2, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;g&#39; =&gt; [key1, key1, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="33">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;h&#39; =&gt; [key2, key1, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="34">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;i&#39; =&gt; [key3, key2, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="35">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;j&#39; =&gt; [key3, key1, key4], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="36">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;k&#39; =&gt; [key2, key4, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="37">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;l&#39; =&gt; [key2, key2, key2],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="38">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;m&#39; =&gt; [key1, key4, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="39">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;n&#39; =&gt; [key1, key3, key2],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="40">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;o&#39; =&gt; [key2, key3, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="41">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;p&#39; =&gt; [key1, key2, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="42">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;q&#39; =&gt; [key1, key1, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="43">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;r&#39; =&gt; [key2, key1, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="44">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;s&#39; =&gt; [key3, key2, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="45">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;t&#39; =&gt; [key3, key1, key2], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="46">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;u&#39; =&gt; [key2, key4, key1], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="47">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;v&#39; =&gt; [key2, key2, key1], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="48">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;w&#39; =&gt; [key3, key1, key3], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;x&#39; =&gt; [key1, key4, key1], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="50">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;y&#39; =&gt; [key1, key3, key1], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby">    &#39;z&#39; =&gt; [key2, key3, key1],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby">    &#39; &#39; =&gt; [key4, key4, key4]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby">    }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="55">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="56">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def formatted_braille_conversion(text)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    braille_characters = convert_to_braille(text)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="58">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    joined_text = braille_characters.transpose.map do |braille|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="60">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">      braille.join.chars.each_slice(80).map do |slice|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="61">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">        slice.join</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="62">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby">    end.transpose.join(&quot;\n&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="64">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    joined_text</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="66">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="67">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def convert_to_braille(eng_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="69">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    eng_string.chars.filter_map do |char|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="70">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">      eng_to_braille[char] if eng_to_braille.key?(char)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="72">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="73">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="74">
+            
+            
+
+            
+
+            <code class="ruby">  ##Needs line break at 40 chars</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="75">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def convert_to_english(braille_string)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="77">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    braille_array = braille_string.split(&quot;\n&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="78">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    parsed_array = parse_array(braille_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="79">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    transposed_parsed_array = transpose_parsed_array(parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="80">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    joined_char_array = join_transposed_array(transposed_parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="81">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    translated_text = joined_char_array.each_slice(80).map do |slice|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="82">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">      slice.filter_map do |line|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="10" data-linenumber="83">
+            <span class="hits">10</span>
+            
+
+            
+
+            <code class="ruby">        eng_to_braille.key(line)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="84">
+            
+            
+
+            
+
+            <code class="ruby">      end.join</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="85">
+            
+            
+
+            
+
+            <code class="ruby">    end.join(&quot;\n&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="86">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="87">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def parse_array(braille_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="89">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    braille_array.map do |line|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="9" data-linenumber="90">
+            <span class="hits">9</span>
+            
+
+            
+
+            <code class="ruby">      line.chars.each_slice(2).map do |slice|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="39" data-linenumber="91">
+            <span class="hits">39</span>
+            
+
+            
+
+            <code class="ruby">        slice</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="92">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="93">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="94">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="95">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="96">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def transpose_parsed_array(parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="97">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    parsed_array.each_slice(3).flat_map do |arrays|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="98">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">      arrays.transpose</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="99">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="100">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="102">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def join_transposed_array(transposed_parsed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="3" data-linenumber="103">
+            <span class="hits">3</span>
+            
+
+            
+
+            <code class="ruby">    transposed_parsed_array.map do |line|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="13" data-linenumber="104">
+            <span class="hits">13</span>
+            
+
+            
+
+            <code class="ruby">      line.map do |char|</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="39" data-linenumber="105">
+            <span class="hits">39</span>
+            
+
+            
+
+            <code class="ruby">        char.join</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="109">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="a1a96cfa8acf7eb2f615e4220a46f74f3b8a9a89">
+  <div class="header">
+    <h3>spec/translator_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>61</b> relevant lines.
+      <span class="green"><b>61</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;./spec/spec_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;Translator&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="14" data-linenumber="4">
+            <span class="hits">14</span>
+            
+
+            
+
+            <code class="ruby">  let(:translator) { Translator.new}</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;#initialize&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    it &#39;exists&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      expect(translator).to be_a(Translator)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  describe &#39;braille keys&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    describe &#39;key1&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;returns a string of braille&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(translator.key1).to eq(&#39;00&#39;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -307,7 +1810,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -329,29 +1832,29 @@
 
             
 
-            <code class="ruby">  def key4</code>
+            <code class="ruby">    describe &#39;key2&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="191" data-linenumber="20">
-            <span class="hits">191</span>
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    &#39;..&#39;</code>
+            <code class="ruby">      it &#39;returns a string of braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="21">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="21">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end </code>
+            
+
+            <code class="ruby">        expect(translator.key2).to eq(&#39;0.&#39;)</code>
           </li>
         </div>
       
@@ -362,18 +1865,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="23">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="23">
+            
             
 
             
 
-            <code class="ruby">  def eng_to_braille_library</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -384,40 +1887,40 @@
 
             
 
-            <code class="ruby">    { </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="25">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    &#39;a&#39; =&gt; [key2, key4, key4], </code>
+            <code class="ruby">    describe &#39;key3&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;b&#39; =&gt; [key2, key2, key4], </code>
+            
+
+            <code class="ruby">      it &#39;returns a string of braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="27">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;c&#39; =&gt; [key1, key4, key4], </code>
+            
+
+            <code class="ruby">        expect(translator.key3).to eq(&#39;.0&#39;)</code>
           </li>
         </div>
       
@@ -428,7 +1931,7 @@
 
             
 
-            <code class="ruby">    &#39;d&#39; =&gt; [key1, key3, key4], </code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -439,7 +1942,7 @@
 
             
 
-            <code class="ruby">    &#39;e&#39; =&gt; [key2, key3, key4], </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -450,40 +1953,40 @@
 
             
 
-            <code class="ruby">    &#39;f&#39; =&gt; [key1, key2, key4], </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;g&#39; =&gt; [key1, key1, key4], </code>
+            
+
+            <code class="ruby">    describe &#39;key4&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="32">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="32">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;h&#39; =&gt; [key2, key1, key4], </code>
+            
+
+            <code class="ruby">      it &#39;returns a string of braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="33">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="33">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;i&#39; =&gt; [key3, key2, key4], </code>
+            
+
+            <code class="ruby">        expect(translator.key4).to eq(&#39;..&#39;)</code>
           </li>
         </div>
       
@@ -494,7 +1997,7 @@
 
             
 
-            <code class="ruby">    &#39;j&#39; =&gt; [key3, key1, key4], </code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -505,7 +2008,7 @@
 
             
 
-            <code class="ruby">    &#39;k&#39; =&gt; [key2, key4, key2], </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -516,7 +2019,7 @@
 
             
 
-            <code class="ruby">    &#39;l&#39; =&gt; [key2, key2, key2],</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -527,51 +2030,51 @@
 
             
 
-            <code class="ruby">    &#39;m&#39; =&gt; [key1, key4, key2], </code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="38">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="38">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;n&#39; =&gt; [key1, key3, key2],</code>
+            
+
+            <code class="ruby">  describe &#39;#eng_to_braille_library&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;o&#39; =&gt; [key2, key3, key2], </code>
+            
+
+            <code class="ruby">    it &#39;can return an array of braille that corresponds to a letter&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;p&#39; =&gt; [key1, key2, key2], </code>
+            
+
+            <code class="ruby">      expect(translator.eng_to_braille[&#39;a&#39;]).to eq([&#39;0.&#39;, &#39;..&#39;, &#39;..&#39;])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="41">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;q&#39; =&gt; [key1, key1, key2], </code>
+            
+
+            <code class="ruby">      expect(translator.eng_to_braille[&#39;z&#39;]).to eq([&quot;0.&quot;, &quot;.0&quot;, &quot;00&quot;])</code>
           </li>
         </div>
       
@@ -582,7 +2085,7 @@
 
             
 
-            <code class="ruby">    &#39;r&#39; =&gt; [key2, key1, key2], </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -593,7 +2096,7 @@
 
             
 
-            <code class="ruby">    &#39;s&#39; =&gt; [key3, key2, key2], </code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
@@ -604,18 +2107,18 @@
 
             
 
-            <code class="ruby">    &#39;t&#39; =&gt; [key3, key1, key2], </code>
+            <code class="ruby">  </code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="45">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="45">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;u&#39; =&gt; [key2, key4, key1], </code>
+            
+
+            <code class="ruby">  context &#39;english to braille translation&#39; do</code>
           </li>
         </div>
       
@@ -626,62 +2129,62 @@
 
             
 
-            <code class="ruby">    &#39;v&#39; =&gt; [key2, key2, key1], </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="47">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="47">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;w&#39; =&gt; [key3, key1, key3], </code>
+            
+
+            <code class="ruby">    describe &#39;#convert_to_braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="48">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="48">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;x&#39; =&gt; [key1, key4, key1], </code>
+            
+
+            <code class="ruby">      it &#39;can convert a string an array of braille values&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="49">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="49">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;y&#39; =&gt; [key1, key3, key1], </code>
+            
+
+            <code class="ruby">        message = &#39;hello&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="50">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="50">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39;z&#39; =&gt; [key2, key3, key1],</code>
+            
+
+            <code class="ruby">        expected = [&quot;0.&quot;, &quot;00&quot;, &quot;..&quot;], [&quot;0.&quot;, &quot;.0&quot;, &quot;..&quot;], [&quot;0.&quot;, &quot;0.&quot;, &quot;0.&quot;], [&quot;0.&quot;, &quot;0.&quot;, &quot;0.&quot;], [&quot;0.&quot;, &quot;.0&quot;, &quot;0.&quot;]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="51">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="51">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    &#39; &#39; =&gt; [key4, key4, key4]</code>
+            
+
+            <code class="ruby">        expect(translator.convert_to_braille(message)).to eq(expected)</code>
           </li>
         </div>
       
@@ -692,7 +2195,7 @@
 
             
 
-            <code class="ruby">    }</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -703,7 +2206,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -725,7 +2228,7 @@
 
             
 
-            <code class="ruby">  def formatted_braille_conversion(text)</code>
+            <code class="ruby">    describe &#39;#formatted_braille_conversion&#39; do</code>
           </li>
         </div>
       
@@ -736,18 +2239,18 @@
 
             
 
-            <code class="ruby">    braille_characters = convert_to_braille(text)</code>
+            <code class="ruby">      it &#39;can take a string of english and convert to braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="57">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="57">
+            <span class="hits">1</span>
             
 
-            <code class="ruby"></code>
+            
+
+            <code class="ruby">        message = &#39;hello&#39;</code>
           </li>
         </div>
       
@@ -758,34 +2261,23 @@
 
             
 
-            <code class="ruby">    joined_text = braille_characters.transpose.map do |braille|</code>
+            <code class="ruby">        expected = &quot;0.0.0.0.0.\n00.00.0..0\n....0.0.0.&quot;</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="59">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="1" data-linenumber="59">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      braille.join.chars.each_slice(80).map do |slice|</code>
+            <code class="ruby">        expect(translator.formatted_braille_conversion(message)).to eq(expected)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="60">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">        slice.join</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="61">
+          <li class="never" data-hits="" data-linenumber="60">
             
             
 
@@ -796,95 +2288,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="62">
-            
-            
-
-            
-
-            <code class="ruby">    end.transpose.join(&quot;\n&quot;)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="63">
-            
-            
-
-            
-
-            <code class="ruby">    </code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="64">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    joined_text</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="65">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="66">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="67">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def convert_to_braille(eng_string)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="68">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    eng_string.chars.map do |char|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="10" data-linenumber="69">
-            <span class="hits">10</span>
-            
-
-            
-
-            <code class="ruby">      eng_to_braille[char]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="70">
+          <li class="never" data-hits="" data-linenumber="61">
             
             
 
@@ -895,13 +2299,112 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="71">
+          <li class="never" data-hits="" data-linenumber="62">
             
             
 
             
 
             <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="63">
+            
+            
+
+            
+
+            <code class="ruby">  </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="64">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  context &#39;braille to english&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="65">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    describe &#39;#convert_to_english&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="66">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      it &#39;can convert a string of braille to english&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="67">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        message = &quot;0.0.0.0.0.\n00.00.0..0\n....0.0.0.&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="68">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expected = &#39;hello&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="69">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        expect(translator.convert_to_english(message)).to eq(expected)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="70">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="71">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -923,62 +2426,62 @@
 
             
 
-            <code class="ruby">  def revert_transposition(braille_string)</code>
+            <code class="ruby">    describe &#39;#convert_to_english helper methods&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="74">
-            <span class="hits">2</span>
+          <li class="never" data-hits="" data-linenumber="74">
+            
             
 
             
 
-            <code class="ruby">    braille_array = braille_string.split(&quot;\n&quot;)</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="75">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="75">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    reordered_array = braille_array.map do |line|</code>
+            <code class="ruby">      describe &#39;#parse_array&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="76">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="1" data-linenumber="76">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">      line.chars.each_slice(2).map do |slice|</code>
+            <code class="ruby">        it &#39;can seperate arrays by every two characters&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="135" data-linenumber="77">
-            <span class="hits">135</span>
+          <li class="covered" data-hits="1" data-linenumber="77">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">        slice</code>
+            <code class="ruby">          array_argument = [&quot;AAAAAA&quot;, &quot;BBBBBB&quot;,&quot;CCCCCC&quot;]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="78">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="78">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">      end</code>
+            
+
+            <code class="ruby">          expected_parsed_array = [[[&quot;A&quot;, &quot;A&quot;], [&quot;A&quot;, &quot;A&quot;], [&quot;A&quot;, &quot;A&quot;]], </code>
           </li>
         </div>
       
@@ -989,7 +2492,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">                                  [[&quot;B&quot;, &quot;B&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;B&quot;, &quot;B&quot;]], </code>
           </li>
         </div>
       
@@ -1000,29 +2503,29 @@
 
             
 
+            <code class="ruby">                                  [[&quot;C&quot;, &quot;C&quot;], [&quot;C&quot;, &quot;C&quot;], [&quot;C&quot;, &quot;C&quot;]]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="81">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="81">
-            <span class="hits">2</span>
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    x = reordered_array.each_slice(3).flat_map do |arrays|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="82">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">      arrays.transpose</code>
+            <code class="ruby">          expect(translator.parse_array(array_argument)).to eq(expected_parsed_array)</code>
           </li>
         </div>
       
@@ -1033,45 +2536,12 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="84">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    joined_char_array = x.map do |line|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="45" data-linenumber="85">
-            <span class="hits">45</span>
-            
-
-            
-
-            <code class="ruby">      line.map do |char|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="135" data-linenumber="86">
-            <span class="hits">135</span>
-            
-
-            
-
-            <code class="ruby">        char.join</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="87">
+          <li class="never" data-hits="" data-linenumber="84">
             
             
 
@@ -1082,40 +2552,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="88">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="89">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    joined_char_array</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="90">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="91">
+          <li class="never" data-hits="" data-linenumber="85">
             
             
 
@@ -1126,46 +2563,112 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="92">
+          <li class="covered" data-hits="1" data-linenumber="86">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def convert_to_english(braille_string)</code>
+            <code class="ruby">      describe &#39;#transpose_parsed_array&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="93">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="87">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    ordered_array = revert_transposition(braille_string)</code>
+            
+
+            <code class="ruby">        it &#39;takes a parsed array and transposed it to readable braille&#39; do</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="94">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="88">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    ordered_array.map do |line|</code>
+            
+
+            <code class="ruby">          parsed_array = [[[&quot;A&quot;, &quot;A&quot;], [&quot;A&quot;, &quot;A&quot;], [&quot;A&quot;, &quot;A&quot;]], </code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="95">
+          <li class="never" data-hits="" data-linenumber="89">
             
             
 
             
 
-            <code class="ruby">      eng_to_braille.key(line)</code>
+            <code class="ruby">                          [[&quot;B&quot;, &quot;B&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;B&quot;, &quot;B&quot;]], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="90">
+            
+            
+
+            
+
+            <code class="ruby">                          [[&quot;C&quot;, &quot;C&quot;], [&quot;C&quot;, &quot;C&quot;], [&quot;C&quot;, &quot;C&quot;]]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="91">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expected_transposed_array = [[[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="92">
+            
+            
+
+            
+
+            <code class="ruby">                                      [[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="93">
+            
+            
+
+            
+
+            <code class="ruby">                                      [[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="94">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(translator.transpose_parsed_array(parsed_array)).to eq(expected_transposed_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="95">
+            
+            
+
+            
+
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -1176,7 +2679,7 @@
 
             
 
-            <code class="ruby">    end.join</code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -1187,12 +2690,232 @@
 
             
 
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="98">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      describe &#39;#join_transposed_array&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="99">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        it &#39;it can join a transposed array of braille into readable braille&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="100">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          transposed_array = [[[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="101">
+            
+            
+
+            
+
+            <code class="ruby">                              [[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]], </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="102">
+            
+            
+
+            
+
+            <code class="ruby">                              [[&quot;A&quot;, &quot;A&quot;], [&quot;B&quot;, &quot;B&quot;], [&quot;C&quot;, &quot;C&quot;]]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="103">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expected_joined_array = [[&quot;AA&quot;, &quot;BB&quot;, &quot;CC&quot;], [&quot;AA&quot;, &quot;BB&quot;, &quot;CC&quot;], [&quot;AA&quot;, &quot;BB&quot;, &quot;CC&quot;]]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="104">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="105">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(translator.join_transposed_array(transposed_array)).to eq(expected_joined_array)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="106">
+            
+            
+
+            
+
+            <code class="ruby">        end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="107">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="108">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="109">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      describe &#39;#braille_to_english&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="110">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">        it &#39;can read braille and produce an english string&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="111">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          braille_string = (&quot;0.0.0.0.0.\n00.00.0..0\n....0.0.0.&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="112">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expected = &quot;hello&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="113">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">          expect(translator.convert_to_english(braille_string)).to eq(expected)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="114">
+            
+            
+
+            
+
+            <code class="ruby">        end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="115">
+            
+            
+
+            
+
+            <code class="ruby">      end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="116">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="117">
+            
+            
+
+            
+
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="98">
+          <li class="never" data-hits="" data-linenumber="118">
             
             
 

@@ -1,14 +1,11 @@
 require_relative 'translator'
-
-@user_input = ARGV 
+require_relative 'file_handler'
 
 translator = Translator.new
 
-read_message = File.read(ARGV[0])
-new_file = File.new(ARGV[1], 'w+')
+read_file = FileHandler.read_file
+write_file = FileHandler.write_file
 
-translation = translator.formatted_braille_conversion(read_message)
-new_file.write(translation)
-puts "Created #{ARGV[1]} containing #{read_message.length} characters"
-
-new_file.close
+translation = translator.formatted_braille_conversion(FileHandler.read_file.read)
+write_file.write(translation)
+puts " Created #{ARGV[1]} containing #{FileHandler.count_english_characters} characters."
