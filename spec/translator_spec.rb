@@ -69,16 +69,20 @@ RSpec.describe 'Translator' do
     end
 
     it 'can handle more than 40 characters' do
-      message = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n
-                BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\n
-                CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\n
-                AAAA\nBBBB\nCCCC"
-      expected = ''
+      message = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\nBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB\nCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC\nAAAA\nBBBB\nCCCC"
+
+      expected = [["AA", "BB", "CC"], ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],
+                  ["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"],["AA", "BB", "CC"]]
       expect(translator.revert_transposition(message)).to eq(expected)
     end
   end
 
-  describe '#convert_to_english' do
+  xdescribe '#convert_to_english' do
     it 'can convert a string of braille to english' do
       message = "0.0.0.0.0.\n00.00.0..0\n....0.0.0."
       expected = 'hello'

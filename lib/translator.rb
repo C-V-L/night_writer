@@ -76,9 +76,13 @@ class Translator
       line.chars.each_slice(2).map do |slice|
         slice
       end
-    end.transpose
+    end
 
-    joined_char_array = reordered_array.map do |line|
+    x = reordered_array.each_slice(3).flat_map do |arrays|
+      arrays.transpose
+    end
+    
+    joined_char_array = x.map do |line|
       line.map do |char|
         char.join
       end
